@@ -27,14 +27,6 @@ def preprocess(image):
 
 camera = Camera()
 
-image_widget = ipywidgets.Image()
-
-traitlets.dlink((camera, 'value'), (image_widget,
-                                    'value'), transform=bgr8_to_jpeg)
-
-display(image_widget)
-
-
 robot = Robot()
 
 # TODO
